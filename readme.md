@@ -11,6 +11,7 @@ macros turns out to be pretty easy.
 # Todo
 
 I want to do the following:
+
 1. clean up the way the method name is created
 2. bundle the live templates
 3. offer the `Function_name_with_underscore` and also `FunctionNameWithProperCase` option
