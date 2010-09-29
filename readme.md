@@ -12,7 +12,7 @@ macros turns out to be pretty easy.
 
 I want to do the following:
 1. clean up the way the method name is created
-1. bundle the live templates
-1. offer the `Function_name_with_underscore` and also `FunctionNameWithProperCase` option
+2. bundle the live templates
+3. offer the `Function_name_with_underscore` and also `FunctionNameWithProperCase` option
 
 
