@@ -1,0 +1,41 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="9e368a9a-faa8-4f4a-94cc-7cd014c28e7d" shortcut="given" description="Generate a given statement" text="[Given(@&quot;$given$&quot;)]&#xD;&#xA;public void Given_$given_f$(){&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="SpecFlow Templates" />
+    </Categories>
+    <Variables>
+      <Variable name="given" expression="" initialRange="0" />
+      <Variable name="given_f" expression="suggestMethodName(given)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="3064ab35-d2f9-4a67-ab6a-1f6fe8957bbd" shortcut="then" description="A specflow then statement" text="[Then(@&quot;$then$&quot;)]&#xD;&#xA;public void Then_$then_f$(){&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="SpecFlow Templates" />
+    </Categories>
+    <Variables>
+      <Variable name="then" expression="" initialRange="0" />
+      <Variable name="then_f" expression="suggestMethodName(then)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ef5913c9-1fb6-4cfb-b600-bc7d4863fc4f" shortcut="when" description="Generates a when statement" text="[When(@&quot;$when$&quot;)]&#xD;&#xA;public void Wiven_$when_f$(){&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="SpecFlow Templates" />
+    </Categories>
+    <Variables>
+      <Variable name="when" expression="" initialRange="0" />
+      <Variable name="when_f" expression="suggestMethodName(when)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
