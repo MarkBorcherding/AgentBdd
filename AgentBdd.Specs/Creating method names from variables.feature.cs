@@ -86,6 +86,13 @@ testRunner.Then(string.Format("it should suggest {0} as the method name", method
         {
             this.SuggestSimpleMethodNames("the foo is \"(.*)\" bar", "the_foo_is_bar");
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Suggest simple method names")]
+        public virtual void SuggestSimpleMethodNames_TheBazIsUn_Cool()
+        {
+            this.SuggestSimpleMethodNames("the baz is un-cool", "the_baz_is_uncool");
+        }
     }
 }
 #endregion
