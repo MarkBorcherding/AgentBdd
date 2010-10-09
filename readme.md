@@ -30,3 +30,13 @@ There is another project that I found that already does this, but for some reaso
 
 This should probably move outside of the AgentBDD project, but they are closely related in my mind, and both are so tiny, I'll keep them together for now.
 
+## To Do
+
+This is still very rough and isn't working at all. The following still needs to be started.
+
+1. Format the messages for success and failures. Follow the autotest message formats.
+1. Create success and failure notification types with appropriate icons.
+1. Make sure the failure appears after the first failure.
+1. Allow the user to create custom message and use custom icons
+1. See if this can run from something besides the GUI (e.g. build scripts or R# runner)
+

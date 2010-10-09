@@ -4,8 +4,21 @@ using NUnit.Core;
 
 namespace GrowlUnit
 {
+
+    [NUnitAddin(Name="Growl Unit",
+                Description="An add in to broadcast test success and failure to Growl for Windows.")]
     public class GrowlNotifier : IAddin, EventListener
     {
+        private readonly IGrowler _growler;
+
+        public GrowlNotifier() 
+            : this(new Growler("Growl Unit")){}
+
+        public GrowlNotifier(IGrowler growler)
+        {
+            _growler = growler;
+        }
+
         public bool Install(IExtensionHost host)
         {
             var eventListenersPoint = host.GetExtensionPoint("EventListeners");
@@ -20,12 +33,12 @@ namespace GrowlUnit
 
         public void RunFinished(Exception exception)
         {
-            
+            _growler.Notify(exception.FormatGrowlMessage());
         }
 
         public void RunFinished(TestResult result)
         {
-            
+            _growler.Notify(result.FormatGrowlMessage());
         }
 
         public void RunStarted(string name, int testCount)

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FE8DAC52-F199-4388-8CBC-A3B6BA1EDA0E}</ProjectGuid>
+    <ProjectGuid>{8FE8FFE1-F0AD-4164-8041-A2914747CB11}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GrowlUnit</RootNamespace>
-    <AssemblyName>GrowlUnit</AssemblyName>
+    <RootNamespace>GrowlUnit.Specs</RootNamespace>
+    <AssemblyName>GrowlUnit.Specs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,15 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Growl.Connector">
-      <HintPath>..\lib\Growl.Connector.dll</HintPath>
-    </Reference>
-    <Reference Include="Growl.CoreLibrary">
-      <HintPath>..\lib\Growl.CoreLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.core.interfaces">
-      <HintPath>..\lib\nunit.core.interfaces.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,12 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GrowlMessageExtensionMethods.cs" />
-    <Compile Include="Growler.cs" />
-    <Compile Include="GrowlMessage.cs" />
-    <Compile Include="GrowlNotifier.cs" />
-    <Compile Include="IGrowler.cs" />
+    <Compile Include="Formatting growl messages.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Formatting growl messages.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Formatting growl messages.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Formatting growl messages.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
