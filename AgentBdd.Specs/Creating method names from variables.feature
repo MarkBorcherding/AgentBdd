@@ -14,3 +14,5 @@ Scenario Outline: Suggest simple method names
 		| the foo's bar			| the_foos_bar		|
 		| the foo is "(.*)" bar | the_foo_is_bar	|
 		| the baz is un-cool	| the_baz_is_uncool	|
+		| the      foo is   coo | the_foo_is_coo	|
+		| the foo should be (.*)| the_foo_should_be |
