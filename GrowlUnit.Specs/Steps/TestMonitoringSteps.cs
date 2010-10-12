@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using GrowlUnit.Specs.Support;
 using NUnit.Core;
 using TechTalk.SpecFlow;
 
@@ -41,38 +42,5 @@ namespace GrowlUnit.Specs.Steps
         public void Then_I_should_see_the_a_failuresuccess_message()
         {
         }
-    }
-
-    public class FakeTestResult : TestResult
-    {
-
-        public FakeTestResult() : base(new TestInfo(new TestName()))
-        {
-            
-        }
-
-      
-
-        public FakeTestResult(TestInfo test) : base(test)
-        {
-        }
-
-        public FakeTestResult(ITest test) : base(test)
-        {
-        }
-
-        public FakeTestResult(TestName testName) : base(testName)
-        {
-        }
-
-        public override bool IsFailure 
-        {
-            get
-            {
-                return IsFakeFailure;
-            }
-        }
-
-        public bool IsFakeFailure{get;set;}
     }
 }

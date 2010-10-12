@@ -5,9 +5,9 @@
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1000]D:\vendor\AgentBdd\AgentBdd.nunit" Expanded="true" />
-    <Node UniqueName="[0-1006]D:\vendor\AgentBdd\GrowlUnit.Specs\bin\Debug\GrowlUnit.Specs.dll" Expanded="true" />
-    <Node UniqueName="[0-1007]GrowlUnit" Expanded="true" />
-    <Node UniqueName="[0-1008]GrowlUnit.Specs" Expanded="true" />
+    <Node UniqueName="[0-1007]D:\vendor\AgentBdd\GrowlUnit.Specs\bin\Debug\GrowlUnit.Specs.dll" Expanded="true" />
+    <Node UniqueName="[0-1008]GrowlUnit" Expanded="true" />
+    <Node UniqueName="[0-1009]GrowlUnit.Specs" Expanded="true" />
     <Node UniqueName="[0-1001]GrowlUnit.Specs.SendingMessagesToGrowlFeature" Expanded="true" />
     <Node UniqueName="[0-1003]GrowlUnit.Specs.TestResultNotitifcationFeature" Expanded="true" />
   </Nodes>

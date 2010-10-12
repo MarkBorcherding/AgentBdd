@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Steps\GrowlSteps.cs" />
     <Compile Include="Steps\TestMonitoringSteps.cs" />
+    <Compile Include="Support\FakeTestResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Notifying of a test restult.feature">
