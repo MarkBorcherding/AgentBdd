@@ -1,0 +1,9 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="GrowlUnit.Specs\bin\Debug\GrowlUnit.Specs.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto">
+    <assembly path="GrowlUnit.Specs\bin\Release\GrowlUnit.Specs.dll" />
+  </Config>
+</NUnitProject>

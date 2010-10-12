@@ -17,21 +17,21 @@ namespace GrowlUnit.Specs
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.3.5.2")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Formatting Growl messages")]
-    public partial class FormattingGrowlMessagesFeature
+    [NUnit.Framework.DescriptionAttribute("Test result notitifcation")]
+    public partial class TestResultNotitifcationFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Formatting growl messages.feature"
+#line 1 "Notifying of a test restult.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Formatting Growl messages", "In order to know the status of each test run\r\nAs a person who loves writing tests" +
-                    "\r\nI want to see useful message about the previous run", ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Test result notitifcation", "In order to know when tests fail or pass\r\nAs an awesome developer\r\nI want to list" +
+                    "en to the NUnit gui and send message to Growl", ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -54,22 +54,37 @@ namespace GrowlUnit.Specs
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Successful test runs")]
+        [NUnit.Framework.DescriptionAttribute("Tests pass")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void SuccessfulTestRuns()
+        public virtual void TestsPass()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful test runs", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tests pass", new string[] {
                         "mytag"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
-testRunner.Given("I have a test result of all successful testS");
+testRunner.Given("I have a growl notifier");
 #line 9
-testRunner.When("I format my growl message");
+testRunner.When("my tests results pass");
 #line 10
-testRunner.Then("the title should be \"Success\"");
-#line 11
-testRunner.And("the message should be \"All green.\"");
+testRunner.Then("I should see the a success message");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Tests fail")]
+        public virtual void TestsFail()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tests fail", ((string[])(null)));
+#line 13
+this.ScenarioSetup(scenarioInfo);
+#line 14
+testRunner.Given("I have a growl notifier");
+#line 15
+testRunner.When("my tests throw an exception");
+#line 16
+testRunner.Then("I should see the a failure message");
 #line hidden
             testRunner.CollectScenarioErrors();
         }

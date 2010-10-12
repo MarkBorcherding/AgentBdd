@@ -1,8 +1,10 @@
-﻿namespace GrowlUnit
+﻿using Growl.Connector;
+using Growl.CoreLibrary;
+
+namespace GrowlUnit
 {
     public interface IGrowler
-    {
-        void Notify(string title, string text);
-        void Notify(GrowlMessage message);
+    {        
+        void Notify(Notification notification);
     }
 }
