@@ -18,11 +18,28 @@ namespace GrowlUnit
 
         public static Notification FormatGrowlMessage(this TestResult @this)
         {
+            if(@this.IsSuccess) {
+                return new Notification(applicationName:"Growl Unit", 
+                                        notificationName:SuccessNotification.NotificationName, 
+                                        id:Guid.NewGuid().ToString(),
+                                        title:"Awesome!",
+                                        text:"You Rock.");   
+            }
+
+            if(@this.IsFailure)
+            {
+                return new Notification(applicationName:"Growl Unit", 
+                                        notificationName:FailureNotification.NotificationName, 
+                                        id:Guid.NewGuid().ToString(),
+                                        title:"Ruh Roh!",
+                                        text:"You suck.");    
+            }
+
             return new Notification(applicationName:"Growl Unit", 
-                                    notificationName:SuccessNotification.NotificationName, 
-                                    id:DateTime.Now.Ticks.ToString(),
-                                    title:"Awesome!",
-                                    text:"You Rock.");   
+                                    notificationName:FailureNotification.NotificationName, 
+                                    id:Guid.NewGuid().ToString(),
+                                    title:"Who knows!",
+                                    text:"Go figure this out fool!");
         }
     }
 }

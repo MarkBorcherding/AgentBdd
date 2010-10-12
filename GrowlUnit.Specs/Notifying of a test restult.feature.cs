@@ -77,13 +77,30 @@ testRunner.Then("I should see the a success message");
         public virtual void TestsFail()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tests fail", ((string[])(null)));
-#line 13
+#line 12
 this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 13
 testRunner.Given("I have a growl notifier");
+#line 14
+testRunner.When("my tests results fail");
 #line 15
+testRunner.Then("I should see the a failure message");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Tests throw an exception")]
+        public virtual void TestsThrowAnException()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tests throw an exception", ((string[])(null)));
+#line 17
+this.ScenarioSetup(scenarioInfo);
+#line 18
+testRunner.Given("I have a growl notifier");
+#line 19
 testRunner.When("my tests throw an exception");
-#line 16
+#line 20
 testRunner.Then("I should see the a failure message");
 #line hidden
             testRunner.CollectScenarioErrors();

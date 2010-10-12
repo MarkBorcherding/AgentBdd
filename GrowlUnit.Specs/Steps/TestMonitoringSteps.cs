@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using NUnit.Core;
 using TechTalk.SpecFlow;
 
@@ -21,7 +22,13 @@ namespace GrowlUnit.Specs.Steps
         [When(@"my tests results pass")]
         public void Wiven_my_tests_results_pass()
         {
-            _growlerNotifier.RunFinished((TestResult) null);
+            _growlerNotifier.RunFinished(new TestResult(new TestInfo(new TestName(){}){}));
+        }
+
+        [When(@"my tests results fail")]
+        public void Wiven_my_test_results_fail()
+        {
+            _growlerNotifier.RunFinished(new FakeTestResult{IsFakeFailure = true});
         }
 
         [When(@"my tests throw an exception")]
@@ -34,5 +41,38 @@ namespace GrowlUnit.Specs.Steps
         public void Then_I_should_see_the_a_failuresuccess_message()
         {
         }
+    }
+
+    public class FakeTestResult : TestResult
+    {
+
+        public FakeTestResult() : base(new TestInfo(new TestName()))
+        {
+            
+        }
+
+      
+
+        public FakeTestResult(TestInfo test) : base(test)
+        {
+        }
+
+        public FakeTestResult(ITest test) : base(test)
+        {
+        }
+
+        public FakeTestResult(TestName testName) : base(testName)
+        {
+        }
+
+        public override bool IsFailure 
+        {
+            get
+            {
+                return IsFakeFailure;
+            }
+        }
+
+        public bool IsFakeFailure{get;set;}
     }
 }
