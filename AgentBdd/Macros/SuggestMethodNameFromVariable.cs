@@ -37,12 +37,11 @@ namespace AgentBdd.Macros
 
         private static string RemoveTheSymbols(string s)
         {
-            return Regex.Replace(s,@"[^A-Za-z0-9_\s]",string.Empty,RegexOptions.None);
+            return Regex.Replace(s,@"[^A-Za-z0-9_\s]",string.Empty,RegexOptions.None).Trim();
         }
 
-        private static string ConvertSpacesToUnderscores(string s)
-        {
-            return Regex.Replace(s,@"\s+","_",RegexOptions.None);
+        private static string ConvertSpacesToUnderscores(string s){
+            return Regex.Replace(s,@"\s+","_");
         }
 
 
