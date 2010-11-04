@@ -5,7 +5,7 @@ I wanted to create a live template with a macro like the following:
     public void function Then_$step_name_function$(){
     }
 
-Unfortunately, there was no way to create a method name from another variable. Creating Îmacros turns out to be pretty easy.
+Unfortunately, there was no way to create a method name from another variable. Creating ï¿½macros turns out to be pretty easy.
 
 ## Installation
 Simply run `rake deploy` from the command line...after installing `rake` ofcourse.
@@ -23,6 +23,8 @@ while you type the step.
 1. offer the `Function_name_with_underscore` and also `FunctionNameWithProperCase` option
 
 # Growl Unit
+
+*NOTE* This is probably total junk and can be completely rewritten. It works though. Dump it in the nunit addins folder.
 
 I've been using the NUnit GUI to run my specs. What I like about the NUnit GUI is it has a setting to rerun the last set of tests after they are rebuilt. It works similar to Autotest. What was missing was a growl display when the tests fail or pass.
 
