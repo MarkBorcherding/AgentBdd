@@ -8,7 +8,7 @@ namespace GrowlUnit.NotificationTypes
 
         public SuccessNotification() : base(NotificationName,NotificationName)
         {
-            Icon = Resources.Icons.pass;
+            Icon = Resources.Icons.green_star;
         }
     }
 }

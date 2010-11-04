@@ -78,8 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\fail.png" />
+    <Content Include="Resources\green_star.png" />
     <Content Include="Resources\pass.png" />
     <Content Include="Resources\pending.png" />
+    <Content Include="Resources\red_error.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

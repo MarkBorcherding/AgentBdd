@@ -8,7 +8,7 @@ namespace GrowlUnit.NotificationTypes
 
         public FailureNotification() : base(NotificationName,NotificationName)
         {
-            Icon = Resources.Icons.fail;
+            Icon = Resources.Icons.red_error;
         }
     }
 }

@@ -67,6 +67,13 @@ namespace GrowlUnit.Resources {
             }
         }
         
+        internal static System.Drawing.Bitmap green_star {
+            get {
+                object obj = ResourceManager.GetObject("green_star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap pass {
             get {
                 object obj = ResourceManager.GetObject("pass", resourceCulture);
@@ -77,6 +84,13 @@ namespace GrowlUnit.Resources {
         internal static System.Drawing.Bitmap pending {
             get {
                 object obj = ResourceManager.GetObject("pending", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap red_error {
+            get {
+                object obj = ResourceManager.GetObject("red_error", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

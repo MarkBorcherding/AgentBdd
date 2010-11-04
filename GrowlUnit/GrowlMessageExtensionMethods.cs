@@ -12,8 +12,8 @@ namespace GrowlUnit
             return new Notification(applicationName:"Growl Unit", 
                                     notificationName:FailureNotification.NotificationName, 
                                     id:DateTime.Now.Ticks.ToString(),
-                                    title:"Ruh Roh!",
-                                    text:"You suck.");
+                                    title:"Fail fail fail!",
+                                    text:@this.Message);
         }
 
         public static Notification FormatGrowlMessage(this TestResult @this)
@@ -23,7 +23,7 @@ namespace GrowlUnit
                                         notificationName:SuccessNotification.NotificationName, 
                                         id:Guid.NewGuid().ToString(),
                                         title:"Awesome!",
-                                        text:"You Rock.");   
+                                        text:@this.Message);   
             }
 
             if(@this.IsFailure)
@@ -31,8 +31,8 @@ namespace GrowlUnit
                 return new Notification(applicationName:"Growl Unit", 
                                         notificationName:FailureNotification.NotificationName, 
                                         id:Guid.NewGuid().ToString(),
-                                        title:"Ruh Roh!",
-                                        text:"You suck.");    
+                                        title:"Fail fail fail!",
+                                        text:@this.Message);    
             }
 
             return new Notification(applicationName:"Growl Unit", 
